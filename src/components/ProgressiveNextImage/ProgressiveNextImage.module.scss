@@ -1,0 +1,38 @@
+.root {
+  animation: skeletonload 3.5s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    #f6f7f810 0px,
+    #edeef150 40px,
+    #f6f7f810 80px
+  );
+  border-radius: 8px;
+  img {
+    display: none;
+  }
+}
+
+.image {
+  animation: appear 0.5s ease-in-out both;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes skeletonload {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
